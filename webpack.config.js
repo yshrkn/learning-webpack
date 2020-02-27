@@ -12,9 +12,17 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [ // ローダーは逆順で順番に実行されることに注意
+        use: [
           'style-loader',
           'css-loader'
+        ] 
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ] 
       },
       {
